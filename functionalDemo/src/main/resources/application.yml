@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+
+      binder:
+        function:
+      bindings:
+        publish-out-0:
+          partitioned: true
+          partitionCount: 3
+          destination: total
+server:
+  port: 8083
+

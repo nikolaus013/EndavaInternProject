@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: consume
+      kafka:
+        bindings:
+          consume-in-0:
+            consumer:
+              ackMode: MANUAL
+            #  resetOffsets: true
+              startOffset: latest
+
+
+      bindings:
+        consume-in-0:
+          destination: total
+
+
+
+
